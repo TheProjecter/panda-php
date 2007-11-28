@@ -1,2 +1,6 @@
 #summary Package details for Panda_Pdo
 #labels Package
+
+= Introduction =
+
+Panda_Pdo is a simple class that extends PHP's native [http://php.net/pdo/ PDO class] and offers some additional functionality to simplify use. 
