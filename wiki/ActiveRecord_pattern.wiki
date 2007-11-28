@@ -1,0 +1,5 @@
+#summary An overview of the ActiveRecord design pattern.
+
+= Introduction =
+
+ActiveRecord is a design pattern that provides an object-oriented wrapper around a single database record.
