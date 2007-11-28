@@ -5,7 +5,7 @@
 
 `Panda_Pdo` is a simple class that extends PHP's native [http://php.net/pdo/ PDO class] and offers some additional functionality to simplify use.
 
-= Using Panda_Pdo =
+= Using `Panda_Pdo` =
 
 `Panda_Pdo` is an adapter and therefore only needs you to provide a few details for it to become fully functional. An example implementation is as follows:
 
