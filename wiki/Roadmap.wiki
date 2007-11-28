@@ -1,8 +1,9 @@
 = The Panda PHP Components Roadmap =
 
-In order for Pand
+In order for Panda PHP to reach a 1.0 status, the following packages will need to be developed. 
 
 == Panda_ActiveRecord ==
+
   * Panda_ActiveRecord_Interface
   * Panda_ActiveRecord_Abstract
   * Panda_ActiveRecord_Exception
