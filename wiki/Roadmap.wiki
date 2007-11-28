@@ -1,7 +1,5 @@
 #labels Featured,Phase-Requirements
-= The Panda PHP Components Roadmap =
-
-In order for Panda PHP to reach a 1.0 status, the following packages will need to be developed. 
+= 1.0 Package Requirements =
 
 == Panda_ActiveRecord ==
 
