@@ -1,0 +1,2 @@
+#summary Package details for Panda_ValueObject
+#labels Package
