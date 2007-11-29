@@ -4,7 +4,7 @@
 
 == Introduction ==
 
-!ActiveRecord is a design pattern that provides an object-oriented wrapper around a single database record. This makes common tasks such as inserting, updating, and deleting easy.
+!ActiveRecord is a design pattern that provides an object-oriented wrapper around a single database record. This makes common tasks such as inserting, updating, and deleting as easy as calling a method on an object.
 
 == Common Implementations ==
 
