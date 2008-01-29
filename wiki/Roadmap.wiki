@@ -1,4 +1,6 @@
+#summary The project roadmap for Panda PHP
 #labels Featured,Phase-Requirements
+
 = 1.0 Package Requirements =
 
 ==Panda_Controller==
