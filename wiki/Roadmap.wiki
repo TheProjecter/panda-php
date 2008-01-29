@@ -3,6 +3,8 @@
 
 = 1.0 Package Requirements =
 
+The driving goal behind the 1.0 release will be to provide the necessary components to develop a flexible framework to handle various page load scenarios. 
+
 ==Panda_Controller==
 ==Panda_Controller_Front==
 ==Panda_Controller_Rest==
