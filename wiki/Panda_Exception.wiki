@@ -1,2 +1,0 @@
-#summary Package details for Panda_Exception
-#labels Package
