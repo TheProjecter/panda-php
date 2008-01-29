@@ -6,10 +6,10 @@
 The driving goal behind the 1.0 release will be to provide the necessary components to develop a flexible framework to handle various page load scenarios. 
 
 ==Panda_Controller==
-==Panda_Controller_Front==
 ==Panda_Controller_Rest==
+==Panda_Dispatcher==
 ==Panda_Loader==
 ==Panda_Model==
 ==Panda_Path==
-==Panda_Path_Route==
+==Panda_Route==
 ==Panda_View==
