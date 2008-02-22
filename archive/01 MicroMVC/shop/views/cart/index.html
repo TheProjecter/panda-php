@@ -1,0 +1,8 @@
+<?php foreach ($products as $product): ?>
+    <li>
+        <a href="?/cart/remove/<?php echo $product->id ?>">Remove</a>
+        <a href="?/products/view/<?php echo $product->id ?>"><?php echo $product->name ?></a>
+    </li>
+<?php endforeach ?>
+
+<pre><?php print_r($products) ?></pre>

@@ -1,0 +1,12 @@
+<?php echo $xhtml->img("images/products/$product->image") ?>
+<?php echo $xhtml->formatText($product->description) ?>
+
+<ul>
+    <li>Weight: <?php echo $product->weight ?> <abbr title="pounds">lbs.</abbr> </li>
+    <li>
+        <del title="Retail Price">$<?php echo number_format($product->retail, 2) ?></del>
+        <ins title="Your Price">$<?php echo number_format($product->price, 2) ?></ins>
+    </li>
+</ul>
+
+<p><a href="?/cart/add/<?php echo $product->id ?>">Add to Cart</a></p>
