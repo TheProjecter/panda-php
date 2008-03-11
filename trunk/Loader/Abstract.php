@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Import the implemented interface
- */
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Interface.php';
 
 
