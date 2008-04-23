@@ -2,7 +2,6 @@
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Interface.php';
 
-
 /**
  * A generic source code loader
  *
