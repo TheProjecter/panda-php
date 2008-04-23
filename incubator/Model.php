@@ -60,7 +60,9 @@ class Panda_Model
      * @return array
      */
     public function getProperties()
-    {}
+    {
+        return $this->properties;
+    }
     
     /**
      * Returns the data in the model
@@ -68,7 +70,9 @@ class Panda_Model
      * @return array
      */
     public function getData()
-    {}
+    {
+        return $this->data;
+    }
     
     /**
      * Sets data in the model from array values
