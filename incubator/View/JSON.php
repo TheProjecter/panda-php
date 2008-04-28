@@ -11,8 +11,8 @@ require_once 'Panda/View/Abstract.php';
  * @author  Michael Girouard
  * @license The New BSD License (http://pandaphp.org/license.html)
  */
-class View_JSON
-extends View_Abstract
+class Panda_View_JSON
+extends Panda_View_Abstract
 {
     /**
      * Renders the JSON data
