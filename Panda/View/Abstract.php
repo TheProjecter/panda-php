@@ -113,7 +113,7 @@ implements Panda_View_Interface
      * @param string $output
      * @return string
      */
-    public function output($output)
+    protected function output($output)
     {
         if ($this->echoOutput) {
             echo $output;
