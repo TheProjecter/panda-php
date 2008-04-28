@@ -45,12 +45,49 @@ extends Panda_View_Abstract
     protected $partials;
     
     /**
+     * Sets a template document
+     *
+     * @param string $template
+     */
+    public function setTemplate($template)
+    {
+        if (is_file($template)) {
+            $this->template = $template;
+        }
+    }
+    
+    /**
+     * Sets a partial document
+     *
+     * @param string $partial A path to the partial document
+     * @param string $target The target XPath
+     */
+    public function setPartial($partial, $target)
+    {
+        if (is_file($partial) && !empty($target)) {
+            $this->partials[$partial] = $target;
+        }
+    }
+    
+    /**
+     * Removes a partial document
+     *
+     * @param string $partial
+     */
+    public function unsetPartial($partial)
+    {
+        if (array_key_exists($partial, $this->partials)) {
+            unset($this->partials[$partial]);
+        }
+    }
+    
+    /**
      * Returns a file which has been parsed by PHP
      *
      * @param string $file The path and file name of the file to parse
      * @return string The parsed file
      */
-    public function parse($file)
+    protected function parse($file)
     {
         $out = '';
         
@@ -72,7 +109,7 @@ extends Panda_View_Abstract
      * @param string $source The path and file name to the partial
      * @param string $target The target XPath to place the partial in
      */
-    public function load($source, $target)
+    protected function load($source, $target)
     {
         $xpath = new DOMXPath($this->document);
         $items = $xpath->query($target);

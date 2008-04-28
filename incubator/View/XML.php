@@ -34,7 +34,31 @@ extends Panda_View_Abstract
      * @var boolean
      */
     protected $formatOutput = true;
-
+    
+    /**
+     * Sets the root node's name
+     *
+     * @param string $name
+     */
+    public function setRootNodeName($name)
+    {
+        $name = (string) $name;
+        
+        if (!empty($name)) {
+            $this->rootNode = $name;
+        }
+    }
+    
+    /**
+     * Turns formatted output on or off
+     *
+     * @param bool $bool
+     */
+    public function setFormatOutput($bool)
+    {
+        $this->formatOutput = (bool) $bool;
+    }
+    
     /**
      * Renders the XML data
      *
@@ -80,7 +104,7 @@ extends Panda_View_Abstract
             $parentNode->appendChild($nodeValue);
         }
     }
-
+    
     /**
      * Tests if a data structure is iteratable
      *
