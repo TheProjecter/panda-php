@@ -1,18 +1,34 @@
-<?php 
+<?php
 
-require 'setup.php';
-require 'View/PHP.php';
+require 'Panda/View/Abstract.php';
 
+/**
+ * Tests for core view operations
+ *
+ */
 class ViewTest
 extends PHPUnit_FrameWork_TestCase
 {
+    /**
+     * The view instance
+     *
+     * @var unknown_type
+     */
     protected $View;
     
+    /**
+     * Creates the view instance
+     *
+     */
     public function setup()
     {
-        $this->View = new View;
+        $this->View = new Example_View;
     }
     
+    /**
+     * Tests the getters and setters for view vars
+     *
+     */
     public function testVars()
     {
         $data = array(
@@ -41,6 +57,10 @@ extends PHPUnit_FrameWork_TestCase
         $this->assertEquals($data, $this->View->getData());
     }
     
+    /**
+     * Tests verbose output
+     *
+     */
     public function testEchoOutput()
     {
         $data = array('foo' => 'bar');
@@ -57,6 +77,10 @@ extends PHPUnit_FrameWork_TestCase
         $this->assertEquals($printedData, $echoedOutput);
     }
     
+    /**
+     * Tests silent output
+     *
+     */
     public function testSilentOutput()
     {
         $data = array('baz' => 'bif');
@@ -71,9 +95,18 @@ extends PHPUnit_FrameWork_TestCase
     }
 }
 
-class View
-extends View_Abstract
+/**
+ * Example view
+ *
+ */
+class Example_View
+extends Panda_View_Abstract
 {
+    /**
+     * Simply print_r's the data
+     *
+     * @return unknown
+     */
     public function render()
     {
         return $this->output(print_r($this->data, true));
