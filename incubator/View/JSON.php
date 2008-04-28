@@ -21,6 +21,6 @@ extends Panda_View_Abstract
      */
     public function render()
     {
-        echo json_encode($this->data);
+        return $this->output(json_encode($this->data));
     }
 }
