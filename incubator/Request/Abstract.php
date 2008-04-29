@@ -3,34 +3,56 @@
 /**
  * A request handler
  *
- * @package Panda_Model
+ * @package Panda_Request
  * @author Michael Girouard (mikeg@lovemikeg.com)
  */
-class Panda_Request
-extends Panda_Model 
+class Panda_Request_Abstract
+implements Panda_Request_Interface
 {
     /**
      * The request URI
      * 
      * @var string
      */
-    protected $uri;
+    private $uri;
     
     /**
      * The request method
      * 
      * @var string
      */
-    protected $method;
+    private $method;
+    
+    /**
+     * The request data
+     *
+     * @var array
+     */
+    private $data = array();
     
     /**
      * The constructor
      */
-    public function __construct()
+    protected function __construct()
     {
         $this->uri    = $_SERVER['REQUEST_URI'];
-        $this->method = $_SERVER['REQUEST_METHOD'];
+        $this->method = strtolower($_SERVER['REQUEST_METHOD']);
         $this->data   = $_REQUEST;
+    }
+    
+    /**
+     * Finalized cloner
+     *
+     */
+    final private function __clone() 
+    {}
+    
+    /**
+     * Returns the request URI
+     */
+    public function getURI()
+    {
+        return $this->uri;
     }
     
     /**
@@ -42,10 +64,12 @@ extends Panda_Model
     }
     
     /**
-     * Returns the request URI
+     * Returns the request data
+     *
+     * @return array
      */
-    public function getURI()
+    public function getData()
     {
-        return $this->uri;
+        return $this->data;
     }
 }
