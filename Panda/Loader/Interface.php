@@ -5,6 +5,7 @@
  * 
  * @package Panda_Loader
  * @author Michael Girouard (mikeg@lovemikeg.com)
+ * @license The New BSD License (http://pandaphp.org/license.html)
  */
 interface Panda_Loader_Interface
 {

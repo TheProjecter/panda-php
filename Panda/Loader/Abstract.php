@@ -1,12 +1,13 @@
 <?php
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Interface.php';
+require_once 'Panda/Loader/Interface.php';
 
 /**
  * A generic source code loader
  *
  * @package Panda_Loader
  * @author Michael Girouard (mikeg@lovemikeg.com)
+ * @license The New BSD License (http://pandaphp.org/license.html)
  */
 class Panda_Loader_Abstract
 implements Panda_Loader_Interface
