@@ -38,4 +38,10 @@ extends Panda_Loader_Abstract
 	{
 	    return self::singleton()->load($className);
 	}
+
+	/**
+	 * Prevents unwanted cloning
+	 */
+	private function __clone() 
+	{}
 }
