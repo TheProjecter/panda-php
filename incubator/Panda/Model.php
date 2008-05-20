@@ -11,16 +11,19 @@ class Panda_Model
     /**
      * A list of the model's allowed properties
      * 
+     * This should be pre-poulated at the class level for each model 
+     * specifically. If this is left empty, anything may be set to the model.
+     * 
      * @var array
      */
-    protected $properties;
+    protected $properties = array();
     
     /**
      * The model's data
      * 
      * @var array
      */
-    protected $data;
+    protected $data = array();
     
     /**
      * The getter
@@ -28,7 +31,7 @@ class Panda_Model
      * @param string $name
      * @return mixed
      */
-    public function __get($name)
+    public function getValue($name)
     {
         if (in_array($name, $this->data)) {
             return $this->data[$name];
@@ -47,7 +50,7 @@ class Panda_Model
      * @param string $name
      * @param mixed $value
      */
-    public function __set($name, $value)
+    public function setValue($name, $value)
     {
         if (in_array($name, $this->properties) || empty($this->properties)) {
             $this->data[$name] = $value;
