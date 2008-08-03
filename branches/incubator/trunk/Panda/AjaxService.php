@@ -3,26 +3,41 @@
 class Panda_AjaxService
 {
 	private $name;
+	private $jsName;
 	private $properties = array();
 	private $methods = array();
 	private $serviceTemplate;
 
-	public function __construct($name, $isClass = false)
+	public function __construct($name, $jsName = false)
 	{
 		$this->name = $name;
 
-		if ($isClass) {
-			$this->captureClassMethods($name);
+		if ($jsName) {
+			$this->jsName = $jsName;
 		}
+		else {
+			$this->jsName = $name;
+		}
+
+		$this->captureClassMethods($name);
 	}
 
 	public function __toString()
 	{
+		$serviceDefinition = '';
 		$methods = $this->renderAllMethods();
+		$properties = $this->renderAllProperties();
+
+		if (!empty($properties)) {
+			$serviceDefinition = "$properties,\n";
+		}
+
+		$serviceDefinition .= $methods;
 
 		$template = $this->getServiceTemplate();
-		$template = str_replace('NAME', $this->name, $template);
-		$template = str_replace('/* Service Definition */', "\n$methods\n\t", $template);
+		$template = str_replace('NAME', $this->jsName, $template);
+		$template = str_replace('SERVICE', $this->name, $template);
+		$template = str_replace('/* Service Definition */', "\n$serviceDefinition\n\t", $template);
 
 		return $template;
 	}
@@ -88,6 +103,17 @@ class Panda_AjaxService
 		return $this->serviceTemplate;
 	}
 
+	private function renderAllProperties()
+	{
+		$out = array();
+
+		foreach ($this->properties as $property => $value) {
+			$out[] = "\t\t'$property' : $value";
+		}
+
+		return implode(",\n", $out);
+	}
+
 	private function renderAllMethods()
 	{
 		$out = array();
@@ -110,6 +136,6 @@ class Panda_AjaxService
 
 	private function renderMethodBody($name)
 	{
-		return "this.sendRequest('$name', arguments);";
+		return "sendRequest('$name', arguments);";
 	}
 }
