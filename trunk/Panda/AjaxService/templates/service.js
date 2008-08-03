@@ -4,7 +4,15 @@ if (typeof panda === 'undefined' || !panda.http) {
 
 NAME = function () {
 	var sendRequest = function (name, params) {
-		console.log('Calling: ' + name + '(' + params + ');');
+		var data = {
+			'service' : 'SERVICE'
+		};
+
+		for (var i = 0; i < params.length; i++) {
+			data['param[' + i +']'] = params[i];
+		}
+
+		return panda.http.get(NAME.endpoint, {'data':data});
 	};
 
 	return {/* Service Definition */};
