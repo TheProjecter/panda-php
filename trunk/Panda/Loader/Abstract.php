@@ -31,10 +31,10 @@ implements Panda_Loader_Interface,
     /**
      * Configures the loader
      *
-     * Configurable values are:
-     * 	[namespace] string The namespace to use
-     * 	[baseDir] string The base directory to use
-     * 	[load] string|array A class or array of classes to automatically load
+     * Configurable values are: <br />
+     * 	[namespace] string The namespace to use <br />
+     * 	[baseDir] string The base directory to use <br />
+     * 	[load] string|array A class or array of classes to automatically load <br />
      *
      * @param array $configuration
      */
