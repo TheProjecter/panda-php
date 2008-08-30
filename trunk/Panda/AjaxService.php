@@ -82,11 +82,14 @@ class Panda_AjaxService
 		$serviceDefinition .= $methods;
 
 		$template = $this->getServiceTemplate();
-		$template = str_replace('NAME', $this->jsName, $template);
-		$template = str_replace('SERVICE', $this->name, $template);
-		$template = str_replace('/* Service Definition */', "\n$serviceDefinition\n\t", $template);
 
-		return $template;
+		return sprintf(
+		    $template,
+		    $this->jsName,
+		    $this->name,
+		    $this->jsName,
+		    $serviceDefinition
+		);
 	}
 
 	/**
