@@ -1,0 +1,12 @@
+#summary Package details for Panda_Loader
+#labels Package
+
+= Introduction =
+
+`Panda_Date` is a utility class for simple date manipulation and comparison.
+
+= API =
+
+The following list of methods defines the public API.
+
+  * `isLessThan(mixed $date)`: Compares the date with the supplied date. Returns true if the date is less than the supplied date.
