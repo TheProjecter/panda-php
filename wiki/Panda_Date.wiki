@@ -10,3 +10,4 @@
 The following list of methods defines the public API.
 
   * `isLessThan(mixed $date)`: Compares the date with the supplied date. Returns true if the date is less than the supplied date.
+  * `isGreaterThan(mixed $date)`: Compares the date with the supplied date. Returns true if the date is greater than the supplied date.
