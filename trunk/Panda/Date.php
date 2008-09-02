@@ -24,6 +24,48 @@ class Panda_Date
     const DEFAULT_FORMAT = 'Y-m-d h:i:s';
 
     /**
+     * A minute in seconds
+     *
+     * @var integer;
+     */
+    const MINUTE = 60;
+
+    /**
+     * An hour in seconds
+     *
+     * @var integer;
+     */
+    const HOUR = 3600;
+
+    /**
+     * A day in seconds
+     *
+     * @var integer;
+     */
+    const DAY = 86400;
+
+    /**
+     * A week in seconds
+     *
+     * @var integer;
+     */
+    const WEEK = 604800;
+
+    /**
+     * A month in seconds
+     *
+     * @var integer;
+     */
+    const MONTH = 2629743.83;
+
+    /**
+     * A year in seconds
+     *
+     * @var integer;
+     */
+    const YEAR = 31556926;
+
+    /**
      * The date's Unix timestamp
      *
      * @var int
@@ -66,6 +108,28 @@ class Panda_Date
     public function __toString()
     {
         return date($this->format, $this->timestamp);
+    }
+
+    /**
+     * Sets the date
+     *
+     * @param mixed $date Any valid strtotime() format.
+     * @link http://www.php.net/strtotime
+     */
+    public function set($date)
+    {
+        $this->timestamp = strtotime($date);
+    }
+
+    /**
+     * Sets the date format
+     *
+     * @param sting $format Any valid date() format.
+     * @link http://www.php.net/date
+     */
+    public function setFormat($format)
+    {
+        $this->format = $format;
     }
 
     /**
