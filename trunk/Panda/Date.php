@@ -122,6 +122,16 @@ class Panda_Date
     }
 
     /**
+     * Offsets the date by the provided offset (in seconds)
+     *
+     * @param int $offset
+     */
+    public function offset($offset)
+    {
+        $this->timestamp += (int) $offset;
+    }
+
+    /**
      * Sets the date format
      *
      * @param sting $format Any valid date() format.
