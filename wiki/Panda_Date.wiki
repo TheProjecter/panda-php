@@ -1,11 +1,11 @@
-#summary Package details for Panda_Loader
+#summary Package details for Panda_Date
 #labels Package
 
-= Introduction =
+= Panda Date =
 
 `Panda_Date` is a utility class for simple date manipulation and comparison.
 
-= API =
+== API ==
 
 The following list of methods defines the public API.
 
