@@ -1,28 +1,17 @@
 #summary The project roadmap for Panda PHP
 #labels Featured,Phase-Requirements
 
-= 1.0 Package Requirements =
+= 1.0 Package List =
 
-The driving goal behind the 1.0 release will be to provide the necessary components to develop a flexible framework to handle various page load scenarios. 
-
-==Model-View-Controller==
-
-A MVC approach has been chosen because of it's exceptional scalability. 
-
-===Models===
-
-Models represent data within an application. 
-
-===Views===
-
-Views handle the presentation of data within an application.
-
-===Controllers===
-
-Controllers act as a broker between views and models. Controllers receive requests to view or manipulate data and communicate appropriately to a model and then pass the result to the view.
-
-==Request Dispatching==
-==REST==
-==Source Loading==
-==Paths==
-==Routes==
+  * [[Panda_Translator]]
+  * [[Panda_Model]]
+  * [[Panda_View]]
+  * [[Panda_FrontController]]
+  * [[Panda_Controller]]
+  * [[Panda_Path]]
+  * [[Panda_Route]]
+  * [[Panda_Loader]]
+  * [[Panda_FIEO]]
+  * [[Panda_SQL]]
+  * [[Panda_DB]]
+  * [[Panda_Date]]
