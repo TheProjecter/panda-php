@@ -9,5 +9,8 @@
 
 The following list of methods defines the public API.
 
+  * `set(mixed $date)`: Sets the date to any valid [http://www.php.net/strtotime strtotime()] format.
+  * `offset(int $offset)`: Offsets the date by the provided offset (in seconds).
+  * `setFormat(string $format)`: Sets the date format to any valid [http://www.php.net/date date()] format.
   * `isLessThan(mixed $date)`: Compares the date with the supplied date. Returns true if the date is less than the supplied date.
   * `isGreaterThan(mixed $date)`: Compares the date with the supplied date. Returns true if the date is greater than the supplied date.
