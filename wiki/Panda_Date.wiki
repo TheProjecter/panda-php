@@ -17,11 +17,23 @@ $rightNow = new Panda_Date;
 echo $rightNow;
 }}}
 
+This should display something like: `2008-09-02 22:41:15`. By default, `Panda_Date` formats dates in a `YYYY-MM-DD HH:MM:SS` format. You can change this at any time by calling the `set()` method. If you prefer, you can pass your preferred format directly to the constructor.
+
+{{{
+// Change the format for $rightNow to only show Year/Month/Day
+$rightNow->setFormat('Y/m/d');
+
+echo $rightNow;
+
+// This should be the same thing
+echo new Panda_Date('today', 'Y/m/d');
+}}}
+
+As you can see, you have the ability to specify dates to the constructor such as `'today'`, `'yesterday'` or `'3 weeks ago'`. This power comes from PHP's [http://www.php.net/strtotime strtotime()] function which converts most english date/time string into a Unix timestamp.
+
 == Offsetting Time ==
 
 == Comparing Dates ==
-
-This should display something like: `2008-09-02 22:41:15`. By default, `Panda_Date` formats dates in a `YYYY-MM-DD HH:MM:SS` format. You can change this at any time by calling the `set()` method. If you prefer, you can pass
 
 == API ==
 
