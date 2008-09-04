@@ -40,4 +40,24 @@ extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($today->isGreaterThan($yesterday));
     }
+
+    public function testSet()
+    {
+        $today = new Panda_Date('today');
+        $yesterday = new Panda_Date('yesterday');
+
+        $yesterday->set('today');
+
+        $this->assertSame((string)$today, (string)$yesterday);
+    }
+
+    public function testOffset()
+    {
+        $today = new Panda_Date('today');
+        $yesterday = new Panda_Date('yesterday');
+
+        $yesterday->offset(Panda_Date::DAY);
+
+        $this->assertSame((string)$today, (string)$yesterday);
+    }
 }
