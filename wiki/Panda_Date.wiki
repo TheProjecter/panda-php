@@ -5,7 +5,7 @@
 
 `Panda_Date` is a utility class for simple date manipulation and comparison. 
 
-On this wiki page, you can read up on how to [get started #Getting_Started] using the `Panda_Date` class, how to class constants to offset time, and also how to compare dates against each other.
+On this wiki page, you can read up on how to [#Getting_Started get started] using the `Panda_Date` class, how to class constants to offset time, and also how to compare dates against each other.
   
 == Getting Started ==
 
