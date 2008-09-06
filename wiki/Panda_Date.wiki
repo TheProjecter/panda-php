@@ -5,7 +5,7 @@
 
 `Panda_Date` is a utility class for simple date manipulation and comparison. 
 
-On this wiki page, you can read up on how to [#Getting_Started get started] using the `Panda_Date` class, how to class constants to offset time, and also how to compare dates against each other.
+On this wiki page, you can read up on how to [#Getting_Started get started] using the `Panda_Date` class, how to class constants to offset time, and also how to compare dates against each other. An [#API overview] and [http://docs.pandaphp.org/class_panda___date.html detailed documentation] is available for developers who just want to see its guts.
   
 == Getting Started ==
 
@@ -32,6 +32,14 @@ echo new Panda_Date('today', 'Y/m/d');
 As you can see, you have the ability to specify dates to the constructor such as `'today'`, `'yesterday'` or `'3 weeks ago'`. This power comes from PHP's [http://www.php.net/strtotime strtotime()] function which converts most english date/time string into a Unix timestamp.
 
 == Offsetting Time ==
+
+While working with dates, it's a common task to need to offset a specific date by a full day, week, year, etc. Fortunately `Panda_Date` has several useful constants which simplify things greatly.
+
+Constants exist for `MINUTE`, `HOUR`, `DAY`, `WEEK`, `MONTH`, and `YEAR`; each of which are measured in seconds. `MONTH` is of course averaged since the days can vary from month-to-month. 
+
+{{{
+$today = new Panda_Date;
+}}}
 
 == Comparing Dates ==
 
