@@ -1,15 +1,15 @@
 <?php
 
 // ** Class loading is far too complex
-// ** PEAR's is short and sweet 
+// ** PEAR's is short and sweet
 abstract class Panda_Loader {
-	
-	public static $routes = array(); // TODO: Make this private
-	
+
+	public static $routes = array();
+
 	final public static function register($expression, $resolve) {
 		self::$routes[] = array($expression, $resolve);
 	}
-	
+
 	final public static function load($className) {
 		dev('    Panda_Loader::load('.$className.')');
 		foreach (self::$routes as $entry) {
@@ -30,11 +30,11 @@ abstract class Panda_Loader {
 		}
 		dev('    Failed!');
 	}
-	
+
 	final public static function defaultConversionBehavior($className) {
 		$mutation = explode('_', $className);
 		$last =& $mutation[ count($mutation) - 1 ];
-		
+
 		if ($last != 'Control' && $last != 'Model') {
 			// Determine if the last portion is a Project Control or Project Model
 			$control = preg_replace('/Control$/', '', $last);
