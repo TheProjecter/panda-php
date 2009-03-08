@@ -2,6 +2,8 @@
 
 /**
  * Creates a new Ajax Service from PHP Classes
+ * 
+ * TODO: This would probably be best if structured after PHP's SoapServer class
  *
  * @package Panda
  * @author Michael Girouard (mikeg@lovemikeg.com)
